@@ -1,0 +1,48 @@
+#home-section { 
+    background: var(--color-primary); 
+    color: var(--color-white);
+}
+#about-us-section { 
+    background: var(--color-white); 
+}
+#services-section { 
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+#faq-section { background: var(--color-white); }
+#contact-section{ 
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+.centered-text {
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+
+    h2 {
+        white-space: nowrap;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+}
+
+.line {
+    width: 100px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    margin: 0 1rem;
+}
+
+.text-white {
+    color: var(--color-white);
+}
+
