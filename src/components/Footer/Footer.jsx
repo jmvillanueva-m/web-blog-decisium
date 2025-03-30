@@ -1,14 +1,6 @@
 import React from 'react';
 import './Footer.css';
 
-// Import icons
-import { ReactComponent as FacebookIcon } from "../../assets/icons/sm/facebook.svg";
-import { ReactComponent as InstagramIcon } from "../../assets/icons/sm/instragram.svg";
-import { ReactComponent as TwitterIcon } from "../../assets/icons/sm/x.svg";
-import { ReactComponent as LinkedinIcon } from "../../assets/icons/sm/linkedin.svg";
-
-
-
 const Footer = () => {
   return (
     <footer className="footer">
@@ -17,10 +9,10 @@ const Footer = () => {
           <span>Síguenos en nuestras redes</span>
           <p>@decisium-ec</p>
           <div className="social-media">
-            <FacebookIcon />
+            {/* <FacebookIcon />
             <InstagramIcon />
             <TwitterIcon />
-            <LinkedinIcon />
+            <LinkedinIcon /> */}
           </div>
           <div className='title-font flex-column '>
             <h3>DECISIUM LEX</h3>

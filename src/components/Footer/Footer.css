@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--color-primary-a);
+  background: var(--bg-blue-linear-gradient-a);
   color: var(--color-white);
   padding-top: 2rem;
   /* position: relative; */
@@ -92,7 +92,7 @@
   
 .footer-bottom {
     border: none;
-    background-color: var(--color-primary);
+
     text-align: center;
     padding: 2rem;
     font-size: 14px;

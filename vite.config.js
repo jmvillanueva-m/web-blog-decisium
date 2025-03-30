@@ -11,5 +11,10 @@ export default defineConfig({
       svgo: false,
     }),
   ],
+  server: {
+    headers: {
+      "Content-Security-Policy": "frame-ancestors 'self'"
+    }
+  },
   base:'/web-blog-decisium',
 });

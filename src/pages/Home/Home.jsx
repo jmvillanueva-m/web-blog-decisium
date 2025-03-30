@@ -15,7 +15,7 @@ function Home() {
         <Navbar></Navbar>
         <FloatingButton></FloatingButton>
         <section id="home-section">
-             {/* <Carousel></Carousel> */}
+             <Carousel></Carousel>
         </section>
 
         <section id="about-us-section">
@@ -26,7 +26,7 @@ function Home() {
                     <div className="line"></div>
                 </div>
                 <div>
-                    <h3 className='title-font'>
+                    <h3 className='font-heading'>
                         Somos DECISIUM LEX, una empresa comprometida con tus casos
                     </h3>
                     <article>
@@ -44,7 +44,7 @@ function Home() {
                     <div className="line"></div>
                 </div>
                 <div>
-                    <h3 className='title-font'>
+                    <h3 className='font-heading'>
                     Somos especialistas en las siguiente áreas
                     </h3>
                 </div>
@@ -58,7 +58,7 @@ function Home() {
                     <div className="line"></div>
                 </div>
                 <div>
-                    <h3 className='title-font'>
+                    <h3 className='font-heading'>
                     ¿Tienes dudas sobre un tema?
                     </h3>
                     <p>Consulta aquí las respuesta a las preguntas más comunes de nuestros clientes</p>
@@ -74,7 +74,7 @@ function Home() {
                 <div className="line"></div>
             </div>
             <div>
-                <h3 className='title-font'>
+                <h3 className='font-heading'>
                 ¿Interesado en contratar nuestros servicios?
                 <br />
                 Por favor, déjanos tu mensaje.

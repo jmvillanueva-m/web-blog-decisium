@@ -1,51 +1,100 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import Icon from "../Icon/Icon";
 import './Carousel.css';
 
-// Import icons
-import { ReactComponent as ArrowLfIcon } from "../../assets/icons/arrows/arrow-lf.svg";
-import { ReactComponent as ArrowRgIcon } from "../../assets/icons/arrows/arrow-rg.svg";
-
 const Carousel = () => {
-  const images = ['justice-figure.png', 'e2.png', 'e3.png'];
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  
+  const slides = [
+    {
+      title: "¿Busca asesoramiento jurídico de calidad?",
+      content: "Su éxito es nuestra prioridad, y estamos preparados para estar a su lado con la experiencia y dedicación que se merece.",
+      links: [
+        { text: "Ver Servicios Legales", url: "#servicios" },
+        { text: "Obtener asistencia", url: "#asistencia" }
+      ],
+      backgroundImage: "url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"
+    },
+    {
+      title: "Expertos en derecho corporativo",
+      content: "Nuestro equipo de abogados especializados ofrece soluciones legales integrales para su empresa.",
+      links: [
+        { text: "Consultoría empresarial", url: "#consultoria" },
+        { text: "Contáctenos", url: "#contacto" }
+      ],
+      backgroundImage: "url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"
+    },
+    {
+      title: "Defensa legal personalizada",
+      content: "Protección jurídica adaptada a sus necesidades personales con un enfoque humano y profesional.",
+      links: [
+        { text: "Casos de éxito", url: "#casos" },
+        { text: "Agendar cita", url: "#cita" }
+      ],
+      backgroundImage: "url('https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"
+    }
+  ];
 
-  const selectNewImage = (next = true) => {
-    const condition = next ? selectedIndex < images.length - 1 : selectedIndex > 0;
-    const nextIndex = next 
-      ? (condition ? selectedIndex + 1 : 0)
-      : (condition ? selectedIndex - 1 : images.length - 1);
-    setSelectedIndex(nextIndex);
+  const goToPrevSlide = () => {
+    setActiveIndex((prevIndex) => 
+      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+    );
   };
 
-  const previous = () => {
-    selectNewImage(false);
+  const goToNextSlide = () => {
+    setActiveIndex((prevIndex) => 
+      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
-  const next = () => {
-    selectNewImage(true);
+  const goToSlide = (index) => {
+    setActiveIndex(index);
   };
 
   return (
-    <div className="container">
+    <div className="carousel-container">
       <div className="carousel">
-        <button onClick={previous}><ArrowLfIcon /></button>
-        <div className="content-hero">
-          <div className="img-hero">
-            <img 
-              src={`${import.meta.env.BASE_URL}img/hero/${images[selectedIndex]}`} 
-              alt="carousel" 
-            />
-          </div>
-          {/* <div className="text-hero">
-            <h2 className="amiri-regular">¿Busca asesoramiento jurídico de calidad?</h2>
-            <p>Su éxito es nuestra prioridad, y estamos preparados para estar a su lado con la experiencia y dedicación que se merece.</p>
-            <div className="buttons-hero">
-              <button className="btn-service">[✔] Ver Servicios Legales</button>
-              <button className="btn-assistance">[🔍] Obtener asistencia</button>
+        <div 
+          className="carousel-inner"
+          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+        >
+          {slides.map((slide, index) => (
+            <div 
+              key={index}
+              className="carousel-slide"
+              style={{ backgroundImage: slide.backgroundImage }}
+            >
+              <div className="slide-content">
+                <h1 className='title-font'>{slide.title}</h1>
+                <p>{slide.content}</p>
+                <div className="links-container">
+                  {slide.links.map((link, i) => (
+                    <a key={i} href={link.url} className="slide-link">
+                      {link.text}
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div> */}
+          ))}
         </div>
-        <button onClick={next}><ArrowRgIcon /></button>
+
+        <button className="carousel-control prev" onClick={goToPrevSlide}>
+          <Icon name="arrow-lf" size="3rem" />
+        </button>
+        <button className="carousel-control next" onClick={goToNextSlide}>
+          <Icon name="arrow-rh" size="3rem"/>
+        </button>
+
+        <div className="carousel-indicators">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`indicator ${index === activeIndex ? 'active' : ''}`}
+              onClick={() => goToSlide(index)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

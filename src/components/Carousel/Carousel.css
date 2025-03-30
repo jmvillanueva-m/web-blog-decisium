@@ -1,78 +1,197 @@
+.carousel-container {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
 
-  
-  .carousel {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--color-white);
-    position: relative;
-    width: 100vw;
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slide-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+  width: 90%;
+}
+
+.slide-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.slide-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.slide-link {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 250px;
+  text-align: center;
+}
+
+.slide-link.btn {
+  background-color: var(--color-secondary);
+}
+
+.slide-link:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.carousel-control.prev {
+  left: 160px;
+}
+
+.carousel-control.next {
+  right: 160px;
+}
+
+.carousel-control svg:hover {
+  fill: var(--color-accent);
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background-color: white;
+  transform: scale(1.2);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .slide-content h1 {
+    font-size: 2rem;
   }
   
-  .carousel button {
-    border: none;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    width: auto;
-    height: auto;
-    z-index: 3;
+  .slide-content p {
+    font-size: 1rem;
   }
   
-  .content-hero {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .carousel-control {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-control.prev {
+    left:20px;
+    bottom: 10px;
   }
   
-  .img-hero {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+  .carousel-control.next {
+    right: 20px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .slide-content h1 {
+    font-size: 1.5rem;
   }
   
-  .img-hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .text-hero {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .buttons-hero {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .buttons-hero button {
+  .slide-link {
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+    min-width: 200px;
   }
   
-  .btn-service {
-    background-color: #4CAF50;
-    color: white;
+  .carousel-control {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
   }
   
-  .btn-assistance {
-    background-color: #008CBA;
-    color: white;
+  .carousel-indicators {
+    bottom: 20px;
   }
+}
