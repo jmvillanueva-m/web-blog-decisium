@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 15px;
-  z-index: 2;
+  z-index: 6;
   max-width: 1280px;
   margin: 0 auto;
   right: calc(50% - 650px + 20px);
@@ -25,7 +25,7 @@
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
-  z-index: 2;
+  z-index: 6;
 }
 
 .whatsapp-button:hover {

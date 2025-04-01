@@ -1,22 +1,35 @@
-#home-section { 
+#home-section {
+    padding-top: 20px;
     background: rgb(39,54,119);
     background: var(--bg-blue-linear-gradient-a);
     color: var(--color-white);
 }
+
 #about-us-section { 
-    background: var(--color-white); 
+    background: var(--color-white);
+
 }
 #services-section { 
     background: rgb(39,54,119);
     background: var(--bg-blue-linear-gradient-a);
     color: var(--color-white);
+    height: 100vh;
 }
-#faq-section { background: var(--color-white); }
+#faq-section { 
+    background: var(--color-white); 
+    height: 100vh;
+}
 
 #contact-section{ 
     background: rgb(39,54,119);
     background: var(--bg-blue-linear-gradient-a);
     color: var(--color-white);
+    height: 100vh;
+}
+
+#team-section{ 
+    background: var(--color-white); 
+    height: 100vh;
 }
 
 h3 {
@@ -24,29 +37,40 @@ h3 {
 }
 
 .centered-text {
+    font-family: 'Forum', serif;;
     color: var(--color-primary);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     width: 100vw;
+    margin: 2rem 0;
 
     h2 {
         white-space: nowrap;
-        font-size: 1rem;
-        font-weight: 400;
+        font-size: 1.3rem;
     }
 
 }
 
 .line {
-    width: 100px;
-    height: 3px;
+    width: 20%;
+    height: 2px;
+    border-radius: 8px;
     background-color: var(--color-secondary);
     margin: 0 1rem;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 2px rgba(242, 182, 44, 0.7));
 }
 
 .text-white {
     color: var(--color-white);
+}
+
+
+@media screen and (max-width: 768px) {
+    #home-section {
+        padding-top: 0;
+    }
 }
 

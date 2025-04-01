@@ -1,0 +1,272 @@
+.media-text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.media-container {
+  position: relative;
+  gap: 2rem;
+  flex-direction: column;
+  flex-basis: 500px;
+  flex-grow: 1;
+}
+
+.main-media {
+  width: 95%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: var(--shadow-button);
+  flex: 2;
+}
+
+.main-image, .main-video {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.main-media:hover .main-image {
+  transform: scale(1.02);
+}
+
+.thumbnail-carousel {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.thumbnail.active {
+  opacity: 1;
+  border-color: var(--color-secondary);
+  transform: translateY(-3px);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-control {
+  position: absolute;
+  top: 40%;
+  color: var(--color-white);
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  opacity: 0.8;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.btn-control:hover {
+  color: var(--color-secondary);
+}
+
+.btn-control.prev {
+  left: 1.5rem;
+}
+
+.btn-control.next {
+  right: 1.5rem;
+}
+
+.about-text {
+  padding: 0 1rem;
+  animation-delay: 0.2s;
+  flex-basis: 500px;
+  flex-grow: 1;
+}
+
+.about-text h3 {
+  font-size: 3rem;
+  text-align: left;
+  color: var(--color-primary);
+}
+
+.about-text article {
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.more-info {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: flex-end;
+}
+
+.stats-section {
+  width: 100%;
+  margin: 1rem 0 3rem 0;
+}
+
+.stats-section div.flex {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.stats-section div.flex div {
+  width: 100%;
+}
+
+.stats-title {
+  white-space: nowrap;
+  font-size: 1.3rem;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.stats-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.stats-carousel {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 0;
+  height: 150px;
+}
+
+.stat-item {
+  background-color: var(--color-primary-a);
+  border-radius: 12px;
+  padding: 1rem 0;
+  flex: 1 1 200px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  min-width: 0;
+}
+
+.stats-carousel .stat-item {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.stats-carousel .stat-item.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.stat-item:hover {
+  transform: scale(1.05);
+}
+
+.counter-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: baseline;
+  gap: 5px;
+  font-family: 'Lovelo', sans-serif;
+  font-size: 5rem;
+}
+
+.counter {
+  color: var(--color-white);
+}
+
+.counter-container span:last-child {
+  color: var(--color-secondary);
+}
+
+.stat-item p {
+  padding: 0;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+@media (max-width: 1024px) {
+  .media-container {
+    flex-direction: column;
+  }
+
+  .main-media {
+    height: 350px;
+  }
+
+  .thumbnail-carousel {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-media {
+    height: 300px;
+  }
+  
+  .about-text {
+    order: -1;
+    padding: 0 1rem;
+  }
+  
+  .thumbnail-carousel {
+    justify-content: flex-start;
+  }
+
+  .stats-grid {
+    display: none;
+  }
+
+  .stats-carousel {
+    display: block;
+  }
+
+  .counter-container {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text {
+    order: -1;
+  }
+
+  .main-media {
+    height: 250px;
+  }
+
+  .counter-container {
+    font-size: 4rem;
+  }
+
+  .stat-item p {
+    font-size: 1.5rem;
+  }
+}

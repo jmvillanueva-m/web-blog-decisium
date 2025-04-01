@@ -4,8 +4,8 @@ import './Home.css'
 import Navbar from '../../components/Navbar/Navbar'
 import Carousel from  '../../components/Carousel/Carousel'
 import FloatingButton from '../../components/FloatingButton/FloatingButton'
+import AboutUsSection from '../../components/AboutUsSection/AboutUsSection'
 import Footer from '../../components/Footer/Footer'
-
 
 function Home() {
   const [count, setCount] = useState(0)
@@ -18,23 +18,7 @@ function Home() {
              <Carousel></Carousel>
         </section>
 
-        <section id="about-us-section">
-            <div className='container'>
-                <div className='centered-text'>
-                    <div className="line"></div>
-                    <h2 className="text">NUESTRA HISTORIA</h2>
-                    <div className="line"></div>
-                </div>
-                <div>
-                    <h3 className='font-heading'>
-                        Somos DECISIUM LEX, una empresa comprometida con tus casos
-                    </h3>
-                    <article>
-                    Desde nuestra fundación nos enfocamos en brindar asesoramiento jurídico integral y personalizado a nuestros clientes. A partir de nuestra misión de proporcionar asistencia jurídica de alta calidad, nos esforzamos por construir relaciones duraderas con nuestros clientes y contribuir a una comunidad más justa y equitativa.
-                    </article>
-                </div>
-            </div>
-        </section>
+        <AboutUsSection />
 
         <section id="services-section">
             <div className="container">

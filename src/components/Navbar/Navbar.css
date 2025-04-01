@@ -7,7 +7,7 @@ header {
     background: rgb(39,54,119);
     background: var(--bg-blue-linear-gradient);
     box-shadow: var(--shadow-multilayer);
-    z-index: 2;
+    z-index: 5;
     color: var(--color-white);
     transition: all 0.4s ease-in-out;
 }
@@ -40,7 +40,6 @@ header.compact .navbar-logo {
         justify-items: center;
         gap: 30px;
     }
-
 }
 
 .info-bar.hidden {
@@ -51,7 +50,7 @@ header.compact .navbar-logo {
 }
 
 .info-bar a {
-    color: #333;
+    color: var(--color-primary);
 }
 
 .info-bar a:hover {
@@ -316,7 +315,8 @@ nav ul li a div:hover svg {
         bottom: 0;
         left: 0;
         width: 100vw;
-          
+        box-shadow: var(--shadow-top);
+         
         .sm-info,
         .content-bar div a span,
         .content-bar div span {
@@ -328,13 +328,10 @@ nav ul li a div:hover svg {
             align-items: center;
         }
 
-        /* Ocultar whatsapp y time */
-        .content-bar a[href*="wa.me"],
         .content-bar div:nth-child(3) {
             display: none !important;
         }
 
-        /* Ajustar gap */
         .content-bar {
             gap: 15px !important;
         }
@@ -351,8 +348,7 @@ nav ul li a div:hover svg {
     }
 
     .info-bar {
-        height: 8dvb;
-        box-shadow: var(--shadow-top);
+        height: 8%;
     }
 
     .info-bar.hidden {
