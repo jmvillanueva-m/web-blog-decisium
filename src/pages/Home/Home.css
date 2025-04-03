@@ -10,10 +10,9 @@
 
 }
 #services-section { 
-    background: rgb(39,54,119);
-    background: var(--bg-blue-linear-gradient-a);
-    color: var(--color-white);
-    height: 100vh;
+	background-color: #01062C;
+	background-image: var(--bg-large-triangle);
+	color: var(--color-white);
 }
 #faq-section { 
     background: var(--color-white); 
@@ -21,19 +20,16 @@
 }
 
 #contact-section{ 
-    background: rgb(39,54,119);
-    background: var(--bg-blue-linear-gradient-a);
-    color: var(--color-white);
-    height: 100vh;
+	background-color: #01041E;
+	background-image: var(--bg-large-triangle);
+	background-attachment: fixed;
+	background-size: cover;
+	color: var(--color-white);
 }
 
 #team-section{ 
     background: var(--color-white); 
     height: 100vh;
-}
-
-h3 {
-    font-size: 2rem;
 }
 
 .centered-text {
@@ -50,7 +46,10 @@ h3 {
         white-space: nowrap;
         font-size: 1.3rem;
     }
+}
 
+h3 {
+	font-size: 2.4rem;
 }
 
 .line {
@@ -73,4 +72,6 @@ h3 {
         padding-top: 0;
     }
 }
+
+
 

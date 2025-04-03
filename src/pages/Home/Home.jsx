@@ -5,6 +5,8 @@ import Navbar from '../../components/Navbar/Navbar'
 import Carousel from  '../../components/Carousel/Carousel'
 import FloatingButton from '../../components/FloatingButton/FloatingButton'
 import AboutUsSection from '../../components/AboutUsSection/AboutUsSection'
+import ServicesCarousel from '../../components/ServicesCarousel/ServicesCarousel'
+import ContactSection from '../../components/ContactSection/ContactSection'
 import Footer from '../../components/Footer/Footer'
 
 function Home() {
@@ -19,21 +21,8 @@ function Home() {
         </section>
 
         <AboutUsSection />
+        <ServicesCarousel />
 
-        <section id="services-section">
-            <div className="container">
-                <div className='centered-text'>
-                    <div className="line"></div>
-                    <h2 className="text-white">SERVICIOS</h2>
-                    <div className="line"></div>
-                </div>
-                <div>
-                    <h3 className='font-heading'>
-                    Somos especialistas en las siguiente áreas
-                    </h3>
-                </div>
-            </div>
-        </section>
         <section id="faq-section">
             <div className='container'>
                 <div className='centered-text'>
@@ -50,7 +39,7 @@ function Home() {
             </div>
         </section>
 
-        <section id="contact-section">
+        {/* <section id="contact-section">
           <div className="container">
             <div className='centered-text'>
                 <div className="line"></div>
@@ -67,7 +56,8 @@ function Home() {
             </div>
           </div>
             
-        </section>
+        </section> */}
+        <ContactSection />
 
         <section id="team-section">
             <div className='container'>

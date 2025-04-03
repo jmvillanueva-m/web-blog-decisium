@@ -1,0 +1,215 @@
+/* ContactSection.css */
+.contact-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  margin: 3rem 0;
+  gap: 200px;
+}
+
+/* Columns */
+.form-column,
+.offices-column {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-column {
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+
+/* Central Image */
+.image-column {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.contact-image {
+  width: 100%;
+  height: 90%;
+  background-image: url("../../assets/images/lawyer-women.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+}
+
+.phone-input span {
+  display: flex;
+  gap: 1rem;
+  text-wrap: nowrap; 
+  padding: 0.75rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.phone-input input {
+  border-radius: 0 4px 4px 0;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: var(--color-secondary);
+}
+
+/* Offices Styles */
+.office-selector {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.office-selector button {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.office-selector button:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.office-selector button:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+.office-selector button.active {
+  color: var(--color-primary);
+  background-color: var(--color-accent);
+  border-color: var(--color-secondary);
+}
+
+.office-info {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.office-info .icon {
+  margin-right: 0.6rem;
+}
+
+.office-info h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.office-info p {
+  /* margin-bottom: 0.5rem; */
+}
+
+.map-container {
+  margin-top: 1.5rem;
+}
+
+.map-placeholder {
+  margin-bottom: 1rem;
+  
+  iframe {
+    width: "600";
+    height: "450";
+    border: none ;
+  }
+}
+
+.map-btn {
+  display: flex;
+  gap: 1rem;
+  width: 150px;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+}
+
+.map-btn:hover {
+  background-color: #3367D6;
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 2rem;
+    min-height: auto;
+  }
+  
+  .image-column {
+    display: none;
+  }
+  
+  .form-column,
+  .offices-column {
+    width: 100%;
+    margin: 0;
+  }
+
+}
