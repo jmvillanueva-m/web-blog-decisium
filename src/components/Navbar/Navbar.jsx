@@ -165,7 +165,7 @@ const Navbar = () => {
   const message = encodeURIComponent("Hola, me gustaría obtener más información sobre...");
 
   return (
-    <header className={!isHomeSection ? 'compact' : ''}>
+    <header className={`${!isHomeSection ? 'compact' : ''} ${isHomeSection ? 'transparent' : ''}`}>
       <InfoBar isVisible={isHomeSection} message={message} />
       
       <div className="container flex-container">

@@ -1,0 +1,127 @@
+.faq-intro {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.faq-container-wrapper {
+    width: 800px;
+    margin: 0 auto;
+    max-height: 450px;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.faq-container {
+    text-align: left;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--color-gray);
+    padding: 0.3rem 0;
+    cursor: pointer;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    padding: 1rem;
+    background-color: var(--color-gray);
+}
+
+.faq-question span:first-child {
+    gap: 0.9rem;
+    margin-right: 1rem;
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: right;
+}
+
+.faq-answer {
+    padding: 1rem 0;
+}
+
+.faq-list {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+
+  }
+  
+.faq-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    list-style-type: disc;
+}
+
+.faq-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-gray);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-help {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-help span:first-child {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+
+/* Custom scrollbar */
+.faq-container-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.faq-container-wrapper::-webkit-scrollbar-track {
+    background: var(--color-gray);
+    border-radius: 4px;
+}
+
+.faq-container-wrapper::-webkit-scrollbar-thumb {
+    background: var(--color-secondary);
+    border-radius: 4px;
+}
+
+.faq-container-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--color-secondary-dark);
+}
+
+@media (max-width: 768px) {
+    .faq-footer {
+        flex-direction: column;
+    }
+    
+    .faq-button {
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+    .centered-text h2 {
+        font-size: 1.1rem;
+    }
+    
+    .faq-intro h3 {
+        font-size: 1.8rem;
+    }
+    
+    .faq-container-wrapper {
+        width: auto;
+        padding-right: 5px;
+    }
+}

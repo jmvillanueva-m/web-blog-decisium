@@ -9,7 +9,7 @@ const ContactSection = () => {
     email: '',
     phone: '',
     service: '',
-    message: ''
+    message: '',
   });
 
   const handleInputChange = (e) => {
@@ -33,6 +33,7 @@ const ContactSection = () => {
       phone1: "0969168326",
       phone2: "0969168326",
       hours: "08h30 - 17h30",
+      srcGoogle:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1108.8704381989899!2d-78.50051009886776!3d-0.21370834824550186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59b3c3d03d941%3A0x34d4b0926765f1fd!2sEdificio%20Parlamento!5e0!3m2!1ses!2sec!4v1743651427962!5m2!1ses!2sec',
       mapUrl: "https://maps.app.goo.gl/sVSXd6tNvNTyPPsG8"
     },
     2: {
@@ -41,6 +42,7 @@ const ContactSection = () => {
       phone1: "0969168326",
       phone2: "0969168326",
       hours: "08h30 - 17h30",
+      srcGoogle: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7996163242315!2d-78.48294492552286!3d-0.17544003541980246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59b67f59a8971%3A0x81bac2a0bd1c0b86!2sEdificio%20Andre!5e0!3m2!1ses!2sec!4v1743725082957!5m2!1ses!2sec",
       mapUrl: "https://maps.app.goo.gl/BAX7XUb3yZggCfFr5"
     }
   };
@@ -48,18 +50,14 @@ const ContactSection = () => {
   return (
     <section id="contact-section">
       <div className="container">
-        <div className='centered-text'>
-          <div className="line"></div>
-          <h2 className="text-white">CONTACTO</h2>
-          <div className="line"></div>
-        </div>
-        <div>
-          <h3 className='font-heading'>
-            ¿Interesado en contratar nuestros servicios?
-            <br />
-            Por favor, déjanos tu mensaje.
-          </h3>
-          <p>Pronto nuestro equipo se comunicará contigo.</p>
+        <div className="section-header">
+          <span className="section-subtitle">CONTÁCTANOS</span>
+          <h2 className="section-title">¿Interesado en contratar nuestros servicios? <br /> Por favor, déjanos tu mensaje.</h2>
+          <div className="header-divider">
+            <div className="divider-line"></div>
+            <Icon name="contact" size="24px" color="var(--color-accent)" />
+            <div className="divider-line"></div>
+          </div>
         </div>
 
         <div className="contact-container">
@@ -173,10 +171,10 @@ const ContactSection = () => {
               <p><Icon name="time" />Horario de Atención {offices[selectedOffice].hours}</p>
             </div>
 
-            <div className="map-container">
+            <div className="map-container flex-column">
               <div className="map-placeholder">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1108.8704381989899!2d-78.50051009886776!3d-0.21370834824550186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59b3c3d03d941%3A0x34d4b0926765f1fd!2sEdificio%20Parlamento!5e0!3m2!1ses!2sec!4v1743651427962!5m2!1ses!2sec"  
-                style={{width: "90%", height: "200px", border: "none"}}
+                <iframe src={offices[selectedOffice].srcGoogle} 
+                style={{width: "100%", height: "200px", border: "none"}}
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
               </div>

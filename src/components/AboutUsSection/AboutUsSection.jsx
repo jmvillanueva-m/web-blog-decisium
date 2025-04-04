@@ -20,7 +20,7 @@ const AboutUsSection = () => {
 
   const stats = [
     { value: 10, symbol: "+", label: "Años de experiencia" },
-    { value: 50, symbol: "+", label: "Clientes" },
+    { value: 50, symbol: "+", label: "Clientes satisfechos" },
     { value: 94, symbol: "%", label: "Casos exitosos" },
     { value: 100, symbol: "+", label: "Proyectos completados" }
   ];
@@ -87,87 +87,112 @@ const AboutUsSection = () => {
   };
 
   return (
-    <section id="about-us-section">
+    <section id="about-us-section" className="about-section">
       <div className="container">
-        <div className="centered-text">
-          <div className="line"></div>
-          <h2>¿QUIENES SOMOS?</h2>
-          <div className="line"></div>
+        {/* Encabezado moderno */}
+        <div className="section-header">
+          <span className="section-subtitle">Nuestra Historia</span>
+          <h2 className="section-title">DECISIUM LEX</h2>
+          <div className="header-divider">
+            <div className="divider-line"></div>
+            <Icon name="balance-scale" size="24px" color="var(--color-accent)" />
+            <div className="divider-line"></div>
+          </div>
         </div>
         
-        <div className="media-text-container">
-          <div className="media-container flex">
-            <div className="main-media ">
+        {/* Contenido principal */}
+        <div className="about-content">
+          {/* Galería de imágenes */}
+          <div className="gallery-container">
+            <div className="main-image-container">
               <img 
                 src={images[activeImage].src} 
                 alt={images[activeImage].alt}
                 className="main-image"
+                loading="lazy"
               />
+              <div className="image-controls">
+                <button className="control-btn prev" onClick={prevImage} aria-label="Imagen anterior">
+                  <Icon name="arrow-lf" size="24px" />
+                </button>
+                <button className="control-btn next" onClick={nextImage} aria-label="Imagen siguiente">
+                  <Icon name="arrow-rh" size="24px" />
+                </button>
+              </div>
             </div>
             
-            <div className="thumbnail-carousel">
+            <div className="thumbnails">
               {images.map((img, index) => (
                 <div 
                   key={img.id}
                   className={`thumbnail ${index === activeImage ? 'active' : ''}`}
                   onClick={() => setActiveImage(index)}
                 >
-                  <img src={img.src} alt={img.alt} />
+                  <img src={img.src} alt={img.alt} loading="lazy" />
                 </div>
               ))}
             </div>
-          
-            <button className="btn-control prev" onClick={prevImage}>
-              <Icon name="thin-arrow-lf" size="3rem" />
-            </button>
-            <button className="btn-control next" onClick={nextImage}>
-              <Icon name="thin-arrow-rh" size="3rem" />
-            </button>
           </div>
 
-          <div className="about-text">
-            <h3 className='font-heading'>
-              Decisium Lex una empresa creada a tu servicio
-            </h3>
-            <article>
-              Desde nuestra fundación nos enfocamos en brindar asesoramiento jurídico integral y personalizado a nuestros clientes. A partir de nuestra misión de proporcionar asistencia jurídica de alta calidad, nos esforzamos por construir relaciones duraderas con nuestros clientes y contribuir a una comunidad más justa y equitativa.
-            </article>
-            <div className="more-info">
-              <p>Más información:</p>
-              <a
-                href="https://www.linkedin.com/"
-                className="btn-transparent btn-hover-effect"
-                target="_blank"
-              >
-                <Icon name="external-link" size="1.2rem" />
-                Visítanos en: 
-                <Icon name="linkedin" size="1.7rem" />
-              </a>
+          {/* Texto descriptivo */}
+          <div className="about-description">
+            <h3>Somos Excelencia Jurídica</h3>
+            <p>
+              Desde nuestra fundación nos enfocamos en brindar asesoramiento jurídico integral y personalizado. 
+              Nuestra misión es proporcionar asistencia legal de alta calidad, construyendo relaciones duraderas 
+              con nuestros clientes y contribuyendo a una sociedad más justa.
+            </p>
+            <div className="about-values">
+              <div className="value-item">
+                <Icon name="shield" size="24px" color="var(--color-accent)" />
+                <span>Confianza y Transparencia</span>
+              </div>
+              <div className="value-item">
+                <Icon name="expertise" size="24px" color="var(--color-accent)" />
+                <span>Experiencia Comprobada</span>
+              </div>
+              <div className="value-item">
+                <Icon name="personalized" size="24px" color="var(--color-accent)" />
+                <span>Enfoque Personalizado</span>
+              </div>
             </div>
+            <a
+              href="https://www.linkedin.com/"
+              className="btn-transparent"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="linkedin" size="20px" />
+              Conoce más en LinkedIn
+            </a>
           </div>
         </div>
                 
+        {/* Estadísticas */}
         <div className="stats-section">
-          <div className='flex'>
-            <span className="font-heading stats-title">SOMOS RESULTADOS</span>
-            <div className='line'></div>
+          <div className="stats-header">
+            <h3>Nuestros Logros</h3>
+            <p>Los números hablan por nosotros</p>
           </div>
           
           {/* Versión desktop - Grid normal */}
           <div className="stats-grid">
             {stats.map((stat, index) => (
-              <div className="stat-item" key={index}>
-                <div className="counter-container">
-                  <span 
-                    ref={el => countersRef.current[index] = el} 
-                    className="counter" 
-                    data-target={stat.value}
-                  >
-                    0
-                  </span>
-                  <span>{stat.symbol}</span>
+              <div className="stat-card" key={index}>
+                <div className="stat-content">
+                  <div className="counter-container">
+                    <span 
+                      ref={el => countersRef.current[index] = el} 
+                      className="counter" 
+                      data-target={stat.value}
+                    >
+                      0
+                    </span>
+                    <span className="counter-symbol">{stat.symbol}</span>
+                  </div>
+                  <p className="stat-label">{stat.label}</p>
                 </div>
-                <p>{stat.label}</p>
+                <div className="stat-decoration"></div>
               </div>
             ))}
           </div>
@@ -176,20 +201,23 @@ const AboutUsSection = () => {
           <div className="stats-carousel">
             {stats.map((stat, index) => (
               <div 
-                className={`stat-item ${index === currentStatIndex ? 'active' : ''}`} 
-                key={index}
+                className={`stat-card ${index === currentStatIndex ? 'active' : ''}`} 
+                key={`mobile-${index}`}
               >
-                <div className="counter-container">
-                  <span 
-                    ref={el => countersRef.current[index + stats.length] = el} 
-                    className="counter" 
-                    data-target={stat.value}
-                  >
-                    0
-                  </span>
-                  <span>{stat.symbol}</span>
+                <div className="stat-content">
+                  <div className="counter-container">
+                    <span 
+                      ref={el => countersRef.current[index + stats.length] = el} 
+                      className="counter" 
+                      data-target={stat.value}
+                    >
+                      0
+                    </span>
+                    <span className="counter-symbol">{stat.symbol}</span>
+                  </div>
+                  <p className="stat-label">{stat.label}</p>
                 </div>
-                <p>{stat.label}</p>
+                <div className="stat-decoration"></div>
               </div>
             ))}
           </div>

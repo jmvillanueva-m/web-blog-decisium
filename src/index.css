@@ -47,6 +47,7 @@
   --color-primary-a: #141d33;
   --color-white: #faf9f5; /*effbf7*/
   --color-black: #000000;
+  --color-gray: #ebe9e9;
 
   --bg-blue-linear-gradient: 
     linear-gradient(354deg, rgba(26,36,81,1) 0%, rgba(26,36,81,1) 10%, rgba(31,43,97,1) 70%, rgba(20,29,51,1) 100%);
@@ -68,7 +69,6 @@
 }
 
 html {
-  /* font-family: "Open Sans", sans-serif; */
   font-family: "Pathway Extreme", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -115,7 +115,7 @@ section > div {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 3rem auto;
   padding: 0rem 1rem;
   overflow: hidden;
 }

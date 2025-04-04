@@ -15,7 +15,7 @@
 .whatsapp-button {
   position: relative;
   background-color: #25d366;
-  color: white;
+  color:var(--color-white);
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -133,7 +133,7 @@
   gap: 12px;
 }
 
-.member-card {
+.member-card-ws {
   justify-content: space-between;
   padding: 10px;
   border-radius: 4px;
@@ -192,13 +192,13 @@
   background-color: #FFC107;
 }
 
-.member-info h4 {
+.member-info-ws h4 {
   margin: 0;
   font-size: 14px;
   font-weight: 600;
 }
 
-.member-info p {
+.member-info-ws p {
   margin: 2px 0 0;
   font-size: 12px;
   color: #666;
@@ -253,7 +253,8 @@
 }
 
 @media screen and (max-width: 750px) {
-  /* .floating-container {
-      display: none;
-  } */
+  
+ .whatsapp-button, .scroll-to-top{
+  box-shadow: 0px 0px 5px var(--color-primary);
+ }
 }

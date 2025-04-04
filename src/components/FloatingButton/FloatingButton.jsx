@@ -89,7 +89,7 @@ const FloatingButton = () => {
                 <a 
                   key={index} 
                   href={`https://wa.me/${member.whatsapp}?text=${member.message}`}
-                  className="member-card flex"
+                  className="member-card-ws flex"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -100,7 +100,7 @@ const FloatingButton = () => {
                       </div>
                       <span className={`status ${member.status === "online" ? 'online' : 'away'}`}></span>
                     </div>
-                    <div className="member-info">
+                    <div className="member-info-ws">
                       <h4>{member.name}</h4>
                       <p>{member.role}</p>
                       {member.status !== "online" && <span className="status-message">{member.status}</span>}

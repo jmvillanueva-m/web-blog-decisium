@@ -1,123 +1,263 @@
+
 .footer {
-  background: var(--bg-blue-linear-gradient-a);
+  background-color: #01062C;
+	background-image: var(--bg-large-triangle);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-brand {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 2rem;
+}
+
+.brand-info {
+  margin-bottom: 2rem;
+}
+
+.brand-name {
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
   color: var(--color-white);
-  padding-top: 2rem;
-  /* position: relative; */
+  font-weight: 700;
 }
-  
-  .footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-bottom: 20px;
-    position: relative;
-  }
-  
-  .logo-section {
-    flex: 1 315px;
 
-    .flex-column {
-      line-height: 1.5rem;
-      margin: 1rem 0;
-    }
+.brand-tagline {
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+}
 
-    h3 {
-        font-size: 2rem;
-    }
+.social-section {
+  margin-top: 2rem;
+}
 
-    p {
-        color: var(--color-secondary);
-        margin: 5px 0;
-      }
-  }
+.social-title {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
 
-  .social-media {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 10px 0;
- }
-  
-  .social-media a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-  }
-  
-  .links-section {
-    display: flex;
-    justify-content: center;
-    flex: 1 315px;
-    gap: 50px;
-  }
-  
-  .links-column {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .links-column h3 {
-    margin: 0 0 10px 0;
-    font-size: 18px;
-  }
-  
-  .links-column a {
-    margin: 5px 0;
-  }
-  
-  .contact-section {
-    flex: 1 315px;
-    text-align: center;
-  }
-  
-  .contact-section h3 {
-    margin: 0 0 10px 0;
-    font-size: 18px;
-  }
-  
-  .contact-section button {
-    background-color: var(--color-secondary);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-  }
-  
-  .contact-section button:hover {
-    filter: drop-shadow(0 0 0.5em #CAA160);
-  }
-  
-  .contact-section p {
-    margin: 10px 0 0 0;
-  }
-  
+.social-handle {
+  color: var(--color-secondary);
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: var(--color-accent);
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 300px;
+  padding: 0 2rem;
+}
+
+.links-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.links-title {
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem 0;
+  color: var(--color-white);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.links-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--color-accent);
+}
+
+.links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.footer-link:hover {
+  color: var(--color-secondary);
+  padding-left: 5px;
+}
+
+.footer-cta {
+  flex: 1;
+  min-width: 300px;
+  padding-left: 2rem;
+}
+
+.cta-title {
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem 0;
+  color: var(--color-white);
+}
+
+.cta-button {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.cta-button:hover {
+  background: #d9b15e;
+  box-shadow: 0 5px 15px rgba(202, 161, 96, 0.4);
+  transform: translateY(-2px);
+}
+
+.cta-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
 .footer-bottom {
-    border: none;
-
-    text-align: center;
-    padding: 2rem;
-    font-size: 14px;
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
 }
 
-@media screen and (max-width: 750px) {
+.footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .logo-section {
-    order: 3;
+.copyright {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.made-in {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.flag-icon {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-top {
+    flex-wrap: wrap;
+    gap: 2rem;
   }
-
-  .links-section{
-    border-top: 1px solid var(--color-secondary) ;
-    border-bottom: 1px solid var(--color-secondary);
-    margin: 2rem 0;
-    padding: 1rem 0;
+  
+  .footer-brand,
+  .footer-links,
+  .footer-cta {
+    flex: 1 1 45%;
+    min-width: auto;
+    padding: 0;
   }
+}
 
-  .contact-section {
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    padding: 3rem 0;
+  }
+  
+  .footer-brand,
+  .footer-links,
+  .footer-cta {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-links {
     order: -1;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 0;
   }
-
-  .footer-bottom {
-    padding-bottom: 6rem;
-
+  
+  .footer-bottom .container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
   }
 }
 
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 1.8rem;
+  }
+  
+  .links-title,
+  .cta-title {
+    font-size: 1.1rem;
+  }
+  
+  .footer-link {
+    font-size: 0.9rem;
+  }
+  
+  .cta-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .copyright,
+  .made-in {
+    font-size: 0.8rem;
+  }
+}

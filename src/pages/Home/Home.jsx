@@ -6,7 +6,9 @@ import Carousel from  '../../components/Carousel/Carousel'
 import FloatingButton from '../../components/FloatingButton/FloatingButton'
 import AboutUsSection from '../../components/AboutUsSection/AboutUsSection'
 import ServicesCarousel from '../../components/ServicesCarousel/ServicesCarousel'
+import FaqSection from '../../components/FAQ/FAQ'
 import ContactSection from '../../components/ContactSection/ContactSection'
+import TeamSection from '../../components/TeamSection/TeamSection'
 import Footer from '../../components/Footer/Footer'
 
 function Home() {
@@ -22,53 +24,9 @@ function Home() {
 
         <AboutUsSection />
         <ServicesCarousel />
-
-        <section id="faq-section">
-            <div className='container'>
-                <div className='centered-text'>
-                    <div className="line"></div>
-                    <h2>PREGUNTAS FRECUENTES</h2>
-                    <div className="line"></div>
-                </div>
-                <div>
-                    <h3 className='font-heading'>
-                    ¿Tienes dudas sobre un tema?
-                    </h3>
-                    <p>Consulta aquí las respuesta a las preguntas más comunes de nuestros clientes</p>
-                </div>
-            </div>
-        </section>
-
-        {/* <section id="contact-section">
-          <div className="container">
-            <div className='centered-text'>
-                <div className="line"></div>
-                <h2 className="text-white">CONTACTO</h2>
-                <div className="line"></div>
-            </div>
-            <div>
-                <h3 className='font-heading'>
-                ¿Interesado en contratar nuestros servicios?
-                <br />
-                Por favor, déjanos tu mensaje.
-                </h3>
-                <p>Pronto nuestro equipo se comunicará contigo.</p>
-            </div>
-          </div>
-            
-        </section> */}
+        <FaqSection />
         <ContactSection />
-
-        <section id="team-section">
-            <div className='container'>
-                <div className='centered-text'>
-                    <div className="line"></div>
-                    <h2>CONOCE A NUESTRO EQUIPO</h2>
-                    <div className="line"></div>
-                </div>
-            </div>
-        </section>
-
+        <TeamSection />
         <Footer></Footer>
     </>
   )

@@ -1,12 +1,18 @@
 #home-section {
     padding-top: 20px;
-    background: rgb(39,54,119);
-    background: var(--bg-blue-linear-gradient-a);
+    background-color: #01062C;
+	background-image: var(--bg-large-triangle);
     color: var(--color-white);
 }
 
 #about-us-section { 
     background: var(--color-white);
+
+    .section-title {
+        background: linear-gradient(to right, #01062C, #6e75af);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
 
 }
 #services-section { 
@@ -14,9 +20,15 @@
 	background-image: var(--bg-large-triangle);
 	color: var(--color-white);
 }
+
 #faq-section { 
     background: var(--color-white); 
-    height: 100vh;
+
+    .section-title {
+        background: linear-gradient(to right, #01062C, #6e75af);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
 }
 
 #contact-section{ 
@@ -29,8 +41,38 @@
 
 #team-section{ 
     background: var(--color-white); 
-    height: 100vh;
+    .section-title {
+        background: linear-gradient(to right, #01062C, #6e75af);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
 }
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section-subtitle {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin: 0 0 1rem;
+    background: linear-gradient(to right, #fff, #ddd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    display: inline-block;
+  }
 
 .centered-text {
     font-family: 'Forum', serif;;
@@ -62,16 +104,14 @@ h3 {
     filter: drop-shadow(0 0 2px rgba(242, 182, 44, 0.7));
 }
 
-.text-white {
-    color: var(--color-white);
-}
-
-
 @media screen and (max-width: 768px) {
     #home-section {
         padding-top: 0;
     }
 }
 
+.text-white {
+    color: var(--color-white);
+}
 
 
