@@ -7,7 +7,7 @@ import BlogPost from './pages/Blog/BlogPost';
 
 function App() {
   return (
-    <Routes>
+    <Routes basename="/web-blog-decisium">
       <Route path="/" element={<Home />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<BlogPost />} />
