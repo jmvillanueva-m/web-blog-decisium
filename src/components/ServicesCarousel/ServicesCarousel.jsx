@@ -141,8 +141,15 @@ const ServicesCarousel = () => {
     document.body.style.overflow = 'auto';
   };
 
-  const handleAgendarClick = () => {
-    window.open('https://wa.me/1234567890', '_blank');
+  const handleAgendarClick = (serviceTitle = null) => {
+    const serviceName = serviceTitle || (selectedService ? selectedService.title : 'servicio jurídico');
+    const encodedMessage = encodeURIComponent(
+      `¡Buen día! Estoy interesado(a) en el servicio de *${serviceName}* que ofrecen.\n` +
+      `Me gustaría recibir más información sobre éste.\n` +
+      `Saludos, [Escriba su nombre]`
+    );
+    
+    window.open(`https://wa.me/593996805484?text=${encodedMessage}`, '_blank');
   };
 
   const nextSlide = () => {
@@ -200,19 +207,15 @@ const ServicesCarousel = () => {
                         className="read-more"
                         onClick={() => handleOpenDialog(service)}
                       >
-                        <div className='flex'>
-                          <Icon name="read" />
-                          Leer más
-                        </div>
+                        <Icon name="read" />
+                        <span>Leer más</span>
                       </button>
                       <button 
                         className="agendar"
-                        onClick={handleAgendarClick}
+                        onClick={() => handleAgendarClick(service.title)}
                       >
-                        <div className='flex'>
                           <Icon name="calendar" />
-                          Agendar
-                        </div>
+                          <span>Agendar</span>
                       </button>
                     </div>
                   </div>
@@ -252,7 +255,7 @@ const ServicesCarousel = () => {
                     <Icon name="arrow-lf" size="16px" />
                     Regresar
                   </button>
-                  <button onClick={handleAgendarClick} className="agendar-btn">
+                  <button onClick={() => handleAgendarClick(selectedService.title)} className="agendar-btn">
                     <Icon name="whatsapp" size="16px" />
                     Agendar por WhatsApp
                   </button>

@@ -27,14 +27,12 @@
 
 .brand-name {
   font-size: 2rem;
-  margin: 0 0 0.5rem 0;
   color: var(--color-white);
-  font-weight: 700;
 }
 
 .brand-tagline {
   color: var(--color-secondary);
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
 .social-section {
@@ -49,15 +47,18 @@
 }
 
 .social-handle {
-  color: var(--color-secondary);
+  color: var(--color-accent);
   margin: 0 0 1rem 0;
   font-size: 1.1rem;
+  padding: 0;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .social-icon {
@@ -93,16 +94,6 @@
   color: var(--color-white);
   position: relative;
   padding-bottom: 0.5rem;
-}
-
-.links-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 40px;
-  height: 2px;
-  background: var(--color-accent);
 }
 
 .links-list {

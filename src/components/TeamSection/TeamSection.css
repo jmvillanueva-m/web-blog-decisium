@@ -5,19 +5,6 @@
     overflow: hidden;
   }
   
-  .header-divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .divider-line {
-    width: 60px;
-    height: 2px;
-    background: linear-gradient(to right, transparent, var(--color-accent), transparent);
-  }
-  
   /* Carrusel corregido */
   .team-carousel-container {
     position: relative;

@@ -17,20 +17,7 @@
   opacity: 0.3;
 }
 
-.header-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.divider-line {
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(to right, transparent, var(--color-accent), transparent);
-}
-
-/* Carousel moderno */
+/* Carousel */
 .services-carousel-container {
   position: relative;
   margin: 3rem auto;
@@ -158,7 +145,7 @@
 .agendar {
   background: var(--color-secondary);
   border: none;
-  color: white;
+  color: var(--color-white);
 }
 
 .agendar:hover {
@@ -198,7 +185,7 @@
   right: -25px;
 }
 
-/* Modal moderno */
+/* Modal*/
 .service-dialog-overlay {
   position: fixed;
   top: 0;
@@ -343,7 +330,7 @@
   box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
 }
 
-/* Sección de pagos moderna */
+/* Sección de pagos */
 .payment-section {
   margin-top: 4rem;
   background: rgba(255, 255, 255, 0.03);

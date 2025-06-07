@@ -28,7 +28,7 @@ const ContactItem = ({ icon, children, href, isLink = true }) => {
     </div>
   );
 
-  return isLink ? <a href={href}>{content}</a> : content;
+  return isLink ? <a href={href} target="_blank" rel="noopener noreferrer">{content}</a> : content;
 };
 
 // Componente para la barra de información superior
@@ -45,8 +45,8 @@ const InfoBar = ({ isVisible, message }) => (
         <ContactItem icon="time" isLink={false}>
           (LU-VI) 8h30 a 17h30 
         </ContactItem>
-        <ContactItem icon="location" href="https://maps.app.goo.gl/n7VaxvGseTF5ogqV6">
-          Ver Oficinas
+        <ContactItem icon="location" href="https://maps.app.goo.gl/t3PNNkjRFyQfk8uQ7">
+          Dir. Oficina
         </ContactItem>
       </div>
       <SocialMediaLinks />
@@ -113,7 +113,7 @@ const Navbar = () => {
     { id: "services", href: "#services-section", label: "Servicios", icon: "services-lg" },
     { id: "faq", href: "#faq-section", label: "FAQ", icon: "info" },
     { id: "contact", href: "#contact-section", label: "Contáctanos", icon: "contact" },
-    { id: "blog", href: "#blog-section", label: "Blog", icon: "blog" },
+    { id: "blog", href: "/web-blog-decisium/blog", label: "Blog", icon: "blog" },
   ], []);
 
   useEffect(() => {

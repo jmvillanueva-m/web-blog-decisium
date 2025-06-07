@@ -9,7 +9,6 @@ import aboutImg3 from '../../assets/images/equipo.jpg'
 const AboutUsSection = () => {
   const countersRef = useRef([]);
   const [activeImage, setActiveImage] = useState(0);
-  const statsContainerRef = useRef(null);
   const [currentStatIndex, setCurrentStatIndex] = useState(0);
   
   const images = [
@@ -89,13 +88,12 @@ const AboutUsSection = () => {
   return (
     <section id="about-us-section" className="about-section">
       <div className="container">
-        {/* Encabezado moderno */}
         <div className="section-header">
           <span className="section-subtitle">Nuestra Historia</span>
           <h2 className="section-title">DECISIUM LEX</h2>
           <div className="header-divider">
             <div className="divider-line"></div>
-            <Icon name="balance-scale" size="24px" color="var(--color-accent)" />
+            <Icon name="about-us" size="24px" color="var(--color-secondary)" />
             <div className="divider-line"></div>
           </div>
         </div>

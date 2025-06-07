@@ -9,7 +9,7 @@
   z-index: 6;
   max-width: 1280px;
   margin: 0 auto;
-  right: calc(50% - 650px + 20px);
+  right: calc(50% - 700px + 20px);
 }
 
 .whatsapp-button {
@@ -145,13 +145,13 @@
   align-items: center;
 }
 
-.member-card:hover {
+.member-card-ws:hover {
   background-color: #ddf5ed;
   outline: 1px solid #25d366;
   box-shadow: -4px 0 0 #25d366;
 }
 
-.member-card:hover .message-icon {
+.member-card-ws:hover .message-icon {
   opacity: 1;
   transform: translateX(0) scale(1);
 }

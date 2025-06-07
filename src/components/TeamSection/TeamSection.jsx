@@ -16,17 +16,17 @@ const TeamSection = () => {
       name: "David Cárdenas",
       position: "Fundador y Gerente",
       image: davidImage,
-      email: "julia.brown@decisiumlex.com",
+      email: "decisiumlex@gmail.com",
       linkedin: "https://linkedin.com/in/juliabrown"
       
     },
     {
       id: 2,
-      name: "Pedro Zabala",
+      name: "Andrés Hurtado",
       position: "Especialista en derecho",
       image: abog1Image,
       email: "pedro.zabala@decisiumlex.com",
-      linkedin: "https://linkedin.com/in/pedrozabala"
+      linkedin: "https://www.linkedin.com/in/andr%C3%A9s-hurtado-troya-698509354/"
     },
     {
       id: 3,

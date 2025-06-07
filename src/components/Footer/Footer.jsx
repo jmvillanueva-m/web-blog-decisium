@@ -23,14 +23,14 @@ const Footer = () => {
       <div className="footer-top container">
         <div className="footer-brand">
           <div className="brand-info">
-            <h3 className="brand-name">DECISIUM LEX</h3>
-            <span className="brand-tagline">Asesores Jurídicos</span>
+            <h3 className="brand-name font-logo">DECISIUM LEX</h3>
+            <span className="brand-tagline font-heading">ASESORES JURÍDICOS</span>
           </div>
           
           <div className="social-section">
             <span className="social-title">Síguenos en nuestras redes</span>
-            {/* <p className="social-handle">@decisium-ec</p> */}
             <SocialMediaLinks />
+            <p className="social-handle">@decisiumlex_ec</p>
           </div>
         </div>
 
