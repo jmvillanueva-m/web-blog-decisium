@@ -40,7 +40,7 @@ header {
 .section-header {
   margin-bottom: 0;
 }
-.section-title {
+.section-title-blog {
   font-size: 3rem;
   background: linear-gradient(to right, #01062C, #6e75af);
   -webkit-background-clip: text;

@@ -104,7 +104,7 @@ const Blog = () => {
         <div className="container">
           <div className="section-header">
             <span className="section-subtitle">Blog</span>
-            <h2 className="section-title">DECISIUM LEX</h2>
+            <h2 className="section-title-blog">DECISIUM LEX</h2>
             <div className="header-divider">
               <div className="divider-line"></div>
               <Icon name="blog" size="24px" color="var(--color-primary)" />

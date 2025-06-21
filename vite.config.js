@@ -22,5 +22,5 @@ export default defineConfig({
       },
     },
   },
-  base:'/web-blog-decisium',
+  base:'/web-blog-decisium/',
 });
