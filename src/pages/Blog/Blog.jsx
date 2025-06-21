@@ -15,7 +15,7 @@ const Blog = () => {
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
-  const apiURL = `/api/wp-json/wp/v2/posts?_embed&per_page=20`;
+  const apiURL = `${import.meta.env.VITE_API_URL}?_embed&per_page=20`;
 
   // Memoizar la función de búsqueda
   const handleSearch = useCallback((searchTerm) => {
@@ -39,6 +39,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
+        console.log(apiURL);
         const response = await fetch(`${apiURL}`);
         
         if (!response.ok) {

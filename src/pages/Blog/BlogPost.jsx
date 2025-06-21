@@ -12,11 +12,13 @@ const BlogPost = () => {
   const [error, setError] = useState(null);
   const { slug } = useParams();
   const navigate = useNavigate();
+  const apiURL = `${import.meta.env.VITE_API_URL}?slug=${slug}&_embed`;
 
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await fetch(`/api/wp-json/wp/v2/posts?slug=${slug}&_embed`);
+        // console.log(`decisium-lex.great-site.net/wp-json/wp/v2/posts?slug=${slug}&_embed`)
+        const response = await fetch(apiURL);
         
         if (!response.ok) {
           throw new Error('Error al cargar el artículo');
