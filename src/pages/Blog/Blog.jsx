@@ -64,20 +64,17 @@ const Blog = () => {
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
   const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
 
-  // Función de paginación persistente
+
   const paginate = useCallback((pageNumber) => {
-    // Validar que el número de página esté dentro del rango
     const validPage = Math.max(1, Math.min(pageNumber, totalPages));
     setCurrentPage(validPage);
     
-    // Scroll suave hacia arriba
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   }, [totalPages]);
 
-  // Resetear a página 1 solo cuando cambian los resultados filtrados
   useEffect(() => {
     setCurrentPage(1);
   }, [filteredPosts]);
@@ -104,16 +101,18 @@ const Blog = () => {
       <section id="blog" className="blog-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-subtitle">Blog</span>
-            <h2 className="section-title-blog">DECISIUM LEX</h2>
-            <div className="header-divider">
-              <div className="divider-line"></div>
-              <Icon name="blog" size="24px" color="var(--color-primary)" />
-              <div className="divider-line"></div>
+            <div>
+              <span className="section-subtitle">Blog</span>
+              <h2 className="section-title">DECISIUM LEX</h2>
+              <div className="header-divider">
+                <div className="divider-line"></div>
+                <Icon name="blog" size="24px" color="var(--color-primary)" />
+                <div className="divider-line"></div>
+              </div>
             </div>
-            <p className="blog-subtitle">Consejos Jurídicos Prácticos</p>
+              <p className="blog-subtitle">Consejos Jurídicos Prácticos</p>          
           </div>
-         
+    
           <BlogSearch onSearch={handleSearch} />
           
           <div className="blog-grid">
@@ -129,7 +128,6 @@ const Blog = () => {
             )}
           </div>
 
-          {/* Paginación mejorada */}
           {filteredPosts.length > postsPerPage && (
             <div className="pagination">
               <button 
@@ -141,8 +139,7 @@ const Blog = () => {
                 <Icon name="thin-arrow-lf" size="16px" color={currentPage === 1 ? "var(--color-gray)" : "var(--color-primary)"} />
                 Anterior
               </button>
-              
-              {/* Mostrar números de página con lógica para muchos resultados */}
+
               {totalPages <= 6 ? (
                 Array.from({ length: totalPages }, (_, i) => i + 1).map(number => (
                   <button

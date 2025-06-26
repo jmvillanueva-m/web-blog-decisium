@@ -10,13 +10,15 @@ const Carousel = () => {
   const autoSlideTimer = useRef(null);
   const slideContentRefs = useRef([]);
 
+  const msgWhatsapp = "https://wa.me/593996805484?text=Saludos%20Abg.%20David%20C.,%20necesito%20información%20sobre..."
+
   const slides = [
     {
       title: "¿Busca asesoramiento jurídico de calidad?",
       content: "Su éxito es nuestra prioridad, y estamos preparados para estar a su lado con la experiencia y dedicación que se merece.",
       links: [
-        { text: "Ver Servicios Legales", url: "#servicios", icon: "external-link", type: "btn-secondary" },
-        { text: "Obtener asistencia", url: "#asistencia", icon: "customer-service", type: "btn-primary" }
+        { text: "Ver Servicios Legales", url: "#services-section", icon: "external-link", type: "btn-secondary" },
+        { text: "Obtener asistencia", url: `${msgWhatsapp}`	, icon: "customer-service", type: "btn-primary" }
       ],
       backgroundImage: "url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"
     },
@@ -24,8 +26,8 @@ const Carousel = () => {
       title: "Expertos en derecho corporativo",
       content: "Nuestro equipo de abogados especializados ofrece soluciones legales integrales para su empresa.",
       links: [
-        { text: "Consultoría empresarial", url: "#consultoria", icon: "external-link", type: "btn-secondary" },
-        { text: "Contáctenos", url: "#contacto", icon: "customer-service", type: "btn-primary" }
+        { text: "Contáctenos", url: "#contact-section", icon: "external-link", type: "btn-secondary" },
+        { text: "Consultas Legales", url: `${msgWhatsapp}`, icon: "customer-service", type: "btn-primary" }
       ],
       backgroundImage: "url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"
     },
@@ -33,8 +35,8 @@ const Carousel = () => {
       title: "Defensa legal personalizada",
       content: "Protección jurídica adaptada a sus necesidades personales con un enfoque humano y profesional.",
       links: [
-        { text: "Casos de éxito", url: "#casos", icon: "external-link", type: "btn-secondary" },
-        { text: "Agendar cita", url: "#cita", icon: "customer-service", type: "btn-primary" }
+        { text: "Casos de éxito", url: "#about-us-section", icon: "external-link", type: "btn-secondary" },
+        { text: "Agendar cita", url: `${msgWhatsapp}`, icon: "customer-service", type: "btn-primary" }
       ],
       backgroundImage: "url('https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"
     }
@@ -196,6 +198,7 @@ const Carousel = () => {
                       href={link.url}
                       className={`${link.type} btn-hover-effect`}
                       style={{ opacity: 0, transform: 'translateY(20px)' }}
+                      target={link.type === "btn-primary" ? "_blank" : undefined}
                     >
                       <Icon name={link.icon} size="2rem" />
                       {link.text}

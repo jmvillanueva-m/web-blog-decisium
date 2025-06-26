@@ -28,7 +28,7 @@ const ServicesCarousel = () => {
     },
     {
       id: 2,
-      title: "Derecho Constritucional",
+      title: "Derecho Constitucional",
       shortDescription: "Protege tus creaciones, marcas y patentes con nuestro equipo especializado en propiedad intelectual.",
       fullDescription: "Protegemos tus activos intelectuales mediante el registro de marcas, patentes y derechos de autor. Nuestros expertos te guiarán en todo el proceso.",
       image: service2,

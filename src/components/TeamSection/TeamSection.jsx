@@ -18,23 +18,6 @@ const TeamSection = () => {
       image: davidImage,
       email: "decisiumlex@gmail.com",
       linkedin: "https://linkedin.com/in/juliabrown"
-      
-    },
-    {
-      id: 2,
-      name: "Andrés Hurtado",
-      position: "Especialista en derecho",
-      image: abog1Image,
-      email: "pedro.zabala@decisiumlex.com",
-      linkedin: "https://www.linkedin.com/in/andr%C3%A9s-hurtado-troya-698509354/"
-    },
-    {
-      id: 3,
-      name: "Sofía Sánchez",
-      position: "Especialista en derecho",
-      image: abog2Image,
-      email: "sofia.sanchez@decisiumlex.com",
-      linkedin: "https://linkedin.com/in/sofiasanchez"
     }
   ];
 
@@ -70,61 +53,69 @@ const TeamSection = () => {
 
         {/* Carrusel del equipo */}
         <div className="team-carousel-container">
-          <button 
-            className="carousel-button prev" 
-            onClick={prevSlide}
-            aria-label="Miembro anterior"
-          >
-            <Icon name="arrow-lf" size="40px" color="var(--color-accent)" />
-          </button>
+        {teamMembers.length > 1 && (
+          <>
+            <button 
+              className="carousel-button prev" 
+              onClick={prevSlide}
+              aria-label="Miembro anterior"
+            >
+              <Icon name="arrow-lf" size="40px" color="var(--color-accent)" />
+            </button>
+          </>
+        )}
           
-          <div className="team-carousel">
-  {teamMembers.map((member, index) => (
-    <div 
-      key={member.id}
-      className={`team-member ${index === currentIndex ? 'active' : ''}`}
-    >
-      <div className="member-image-container">
-        <img 
-          src={member.image} 
-          alt={member.name}
-          className="member-image"
-          loading="lazy"
-        />
-        <div className="member-overlay">
-          <div className="social-links">
-            <a 
-              href={`mailto:${member.email}`}
-              aria-label={`Enviar email a ${member.name}`}
-            >
-              <Icon name="email" size="20px" color="white" />
-            </a>
-            <a 
-              href={member.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Perfil de LinkedIn de ${member.name}`}
-            >
-              <Icon name="linkedin" size="20px" color="white" />
-            </a>
+          <div className={`team-carousel ${teamMembers.length === 1 ? 'single-member' : ''}`}>
+            {teamMembers.map((member, index) => (
+              <div 
+                key={member.id}
+                className={`team-member ${index === currentIndex ? 'active' : ''}`}
+              >
+                <div className="member-image-container">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="member-image"
+                    loading="lazy"
+                  />
+                  <div className="member-overlay">
+                    <div className="social-links">
+                      <a 
+                        href={`mailto:${member.email}`}
+                        aria-label={`Enviar email a ${member.name}`}
+                      >
+                        <Icon name="email" size="20px" color="white" />
+                      </a>
+                      <a 
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Perfil de LinkedIn de ${member.name}`}
+                      >
+                        <Icon name="linkedin" size="20px" color="white" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="member-info">
+                  <h3>{member.name}</h3>
+                  <p>{member.position}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-      </div>
-      <div className="member-info">
-        <h3>{member.name}</h3>
-        <p>{member.position}</p>
-      </div>
-    </div>
-  ))}
-</div>
-        
-          <button 
-            className="carousel-button next" 
-            onClick={nextSlide}
-            aria-label="Siguiente miembro"
-          >
-            <Icon name="arrow-rh" size="40px" color="var(--color-accent)" />
-          </button>
+            
+          {teamMembers.length > 1 && (
+            <>
+              <button 
+                className="carousel-button next" 
+                onClick={nextSlide}
+                aria-label="Siguiente miembro"
+              >
+                <Icon name="arrow-rh" size="40px" color="var(--color-accent)" />
+              </button>
+            </>
+          )}
         </div>
         
       </div>

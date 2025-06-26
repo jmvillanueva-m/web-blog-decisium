@@ -16,11 +16,38 @@ const FAQ = () => {
         <>
           Ofrecemos asesoría y representación en diversas áreas del derecho, incluyendo:
           <ul className="faq-list">
-            <li>Derecho Civil (divorcios, herencias, contratos)</li>
-            <li>Derecho Laboral (despidos, liquidaciones)</li>
-            <li>Derecho Penal (defensas, denuncias)</li>
-            <li>Derecho de Familia (pensión alimenticia, régimen de visitas)</li>
-            <li>Derecho Corporativo y Notarial</li>
+            <li>  
+              <strong>Derecho Administrativo</strong>  
+              <p>Asesoría en procedimientos ante entidades públicas, recursos administrativos y contratación estatal.</p>  
+            </li>  
+            <li>  
+              <strong>Derecho Constitucional</strong>  
+              <p>Protección de derechos fundamentales, acciones de amparo y defensa ante tribunales constitucionales.</p>  
+            </li>  
+            <li>  
+              <strong>Derecho Bancario</strong>  
+              <p>Defensa en conflictos con entidades financieras, reclamaciones de cláusulas abusivas y asesoría regulatoria.</p>  
+            </li>  
+            <li>  
+              <strong>Derecho Notarial y Mediación</strong>  
+              <p>Legalización de documentos, protocolos notariales y resolución extrajudicial de conflictos.</p>  
+            </li>  
+            <li>  
+              <strong>Derecho Civil</strong> (divorcios, herencias, contratos)  
+              <p>Representación en demandas civiles, sucesiones, divorcios incausados y redacción de contratos privados.</p>  
+            </li>  
+            <li>  
+              <strong>Derecho Laboral</strong> (despidos, liquidaciones)  
+              <p>Reclamos por despido injustificado, cálculo de beneficios laborales y defensa en inspecciones de trabajo.</p>  
+            </li>  
+            <li>  
+              <strong>Derecho Penal</strong> (defensas, denuncias)  
+              <p>Defensa en procesos penales, asesoría a víctimas y estrategias para sobreseimientos o reducción de penas.</p>  
+            </li>  
+            <li>  
+              <strong>Derecho de Familia</strong> (pensión alimenticia, régimen de visitas)  
+              <p>Fijación de pensiones, custodia compartida y procesos de adopción o patria potestad.</p>  
+            </li> 
           </ul>
         </>
       )

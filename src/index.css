@@ -356,7 +356,7 @@ img {
 .section-title {
   font-size: 2.5rem;
   margin: 0 0 1rem;
-  background: linear-gradient(to right, #fff, #ddd);
+  background: linear-gradient(to right, #fff, var(--color-accent));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

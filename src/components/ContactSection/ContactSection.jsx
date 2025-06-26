@@ -65,12 +65,12 @@ const ContactSection = () => {
           <div className="form-column">
             <form onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="fullName">Nombre Completo:</label>
+                <label htmlFor="fullName">Nombre:</label>
                 <input
                   type="text"
                   id="fullName"
                   name="fullName"
-                  placeholder="Ejm: Aureliano Buendia Iguarin"
+                  placeholder="Ingrese su nombre"
                   value={formData.fullName}
                   onChange={handleInputChange}
                   required
@@ -83,7 +83,7 @@ const ContactSection = () => {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Ejm: aureliano@gmail.com"
+                  placeholder="Ejm: ingresar.email@gmail.com"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
@@ -116,9 +116,12 @@ const ContactSection = () => {
                   required
                 >
                   <option value="">Seleccione un servicio</option>
-                  <option value="servicio1">Servicio 1</option>
-                  <option value="servicio2">Servicio 2</option>
-                  <option value="servicio3">Servicio 3</option>
+                  <option value="Derecho Administrativo">Derecho Administrativo</option>
+                  <option value="Derecho Constitucional">Derecho Constitucional</option>
+                  <option value="Derecho Bancario">Derecho Bancario</option>
+                  <option value="Derecho Notarial">Derecho Notarial y Mediación</option>
+                  <option value="Derecho de Familia">Derecho de Familia</option>
+                  <option value="Derecho de Público">Derecho Público</option>
                 </select>
               </div>
 
@@ -136,7 +139,7 @@ const ContactSection = () => {
 
               <button type="submit" className="submit-btn">
                 <Icon name="send-msj" />
-                Enviar solicitud
+                Enviar mensaje
                 </button>
             </form>
           </div>
@@ -153,13 +156,13 @@ const ContactSection = () => {
                 className={selectedOffice === 1 ? 'active' : ''}
                 onClick={() => setSelectedOffice(1)}
               >
-                Oficina 1
+                Oficina Matriz
               </button>
               <button
                 className={selectedOffice === 2 ? 'active' : ''}
                 onClick={() => setSelectedOffice(2)}
               >
-                Oficina 2
+                Oficina Sucursal
               </button>
             </div>
 

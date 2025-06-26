@@ -50,14 +50,6 @@ const FloatingButton = () => {
 
   const teamMembers = [
     { 
-      name: "Andrés Hurtado", 
-      role: "Abogado Especialista", 
-      status: "online",
-      photo: andresPhoto,
-      whatsapp: "+593983084209",
-      message: "Saludos Abg. Andrés H., necesito información sobre ...",
-    },
-    { 
       name: "David Cárdenas", 
       role: "Abogado Especialista", 
       status: "online",

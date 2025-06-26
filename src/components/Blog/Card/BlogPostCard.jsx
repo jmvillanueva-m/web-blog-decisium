@@ -37,7 +37,7 @@ const BlogPostCard = ({ post }) => {
       <div className="post-content">
         <h3 className="post-title" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
         
-        <div className="post-meta">
+        <div className="post-meta-card">
           {post._embedded && post._embedded.author && (
             <span className="post-author">
               Por {post._embedded.author[0].name}
@@ -60,9 +60,9 @@ const BlogPostCard = ({ post }) => {
         <div>
           <Link 
             to={`/blog/${post.slug}`} 
-            className="btn-primary read-more-btn btn-hover-effect"
+            className="flex read-more-btn"
           >
-            <Icon name="read-article" size="24px" color="var(--color-white)" />
+            <Icon name="read-article" size="24px" color="var(--color-primary)" />
             Leer artículo completo
           </Link>
         </div>

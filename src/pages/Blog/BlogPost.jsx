@@ -66,7 +66,7 @@ const BlogPost = () => {
             </Link>
             <Link to="/" className="back-to-home">
               <Icon name="home" size="24px" color="var(--color-white)" />
-              <span>Página Principal</span>
+              <span>Inicio</span>
             </Link>
           </div>
         </nav>
@@ -76,10 +76,12 @@ const BlogPost = () => {
         <article className="blog-post-container">
           <div className="post-header">
             <div className="post-meta">
-              <span className="article-date-">{formatDate(post.date)}</span>
-              {post._embedded && post._embedded.author && (
-                <span className="post-author">Por {post._embedded.author[0].name}</span>
-              )}
+              <div>
+                <span className="article-date-">{formatDate(post.date)}</span>
+                {post._embedded && post._embedded.author && (
+                  <span className="post-author">Autor: {post._embedded.author[0].name}</span>
+                )}
+              </div>
               {post._embedded && post._embedded['wp:term'] && (
                 <div className="post-categories">
                   {post._embedded['wp:term'][0].map(category => (

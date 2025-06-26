@@ -49,7 +49,12 @@ const Footer = () => {
 
         <div className="footer-cta">
           <h3 className="cta-title">¿EN BÚSQUEDA DE ASESORÍA LEGAL?</h3>
-          <button className="cta-button">
+          <button 
+             onClick={() => window.open(
+              "https://wa.me/593996805484?text=Saludos%20Abg.%20David%20C.,%20necesito%20información%20sobre...", 
+              "_blank"
+            )}
+            className="cta-button">
             <Icon name="customer-service" size="16px" />
             Hablar con un asesor 
           </button>

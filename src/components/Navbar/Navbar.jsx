@@ -40,7 +40,7 @@ const InfoBar = ({ isVisible, message }) => (
           decisiumlex@gmail.com
         </ContactItem>
         <ContactItem icon="phone-call" href={`tel:+593996805484`}>
-          (+593) 969168326
+          (+593) 099 680 5484
         </ContactItem>
         <ContactItem icon="time" isLink={false}>
           (LU-VI) 8h30 a 17h30 
